@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "Intelliq",
+    "slug": "GroqChatApp",
+    "version": "1.5.0",
+    "icon": "./assets/images/chat.png",
+    "scheme": "GroqChatApp",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.msdharani.GroqChatApp",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app needs access to your microphone to record audio messages.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to send images.",
+        "NSCameraUsageDescription": "This app needs access to your camera to take pictures.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.msdharani.GroqChatApp",
+      "permissions": [
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "MANAGE_EXTERNAL_STORAGE"
+      ],
+      "usesCleartextTraffic": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/chat.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "build": {
+      "preview": {
+        "android": {
+          "buildType": "apk",
+          "gradleCommand": ":app:assembleRelease"
+        },
+        "ios": {
+          "buildType": "release"
+        },
+        "hooks": {
+          "pre-install": "node patch-react-native-voice.js"
+        }
+      }
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/chat.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/chat.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "02ad9778-fb1b-453a-984a-c4853209da9c"
+      }
+    },
+    "owner": "msdharani"
+  }
+}
