@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "SplitWise",
+    "slug": "splitwise-expense-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.svg",
+    "scheme": "splitwise",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.splitwise.expensetracker"
+    },
+    "android": {
+      "versionCode": 1,
+      "package": "com.splitwise.expensetracker",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.svg"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/icon.svg"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b8e2380a-9492-43e9-9f39-ad2e24f9ee65"
+      }
+    },
+    "owner": "msdharani"
+  }
+}

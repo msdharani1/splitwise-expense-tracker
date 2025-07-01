@@ -1,0 +1,8 @@
+# Ignore temp, system, and service files
+*.log
+.ServiceHub/
+.vscode/
+*.sock
+*.tmp
+*.pid
+node_modules/.cache
